@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Users, Trophy, Rocket, Share2, Calendar } from "lucide-react";
+import { ArrowRight, Sparkles, Users, Trophy, Rocket, Share2, Calendar, Instagram } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import genixImg from "@/assets/genix.jpeg";
 import event1 from "@/assets/event1.jpeg";
@@ -242,7 +242,7 @@ export default function Home() {
               <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer noopener" className="group relative block aspect-square rounded-xl overflow-hidden border border-border">
                 <img src={e.url} alt="Instagram post" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
                 <div className="absolute inset-0 bg-background/70 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
-                  <Share2 className="text-teal" size={24} />
+                  <Instagram className="text-teal" size={24} />
                 </div>
               </a>
             </Reveal>
@@ -250,7 +250,7 @@ export default function Home() {
         </div>
         <div className="mt-8 text-center">
           <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer noopener" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border hover:border-teal hover:text-teal transition font-semibold">
-            <Share2 size={18} /> Follow @genix.gtbit
+            <Instagram size={18} /> Follow @genix.gtbit
           </a>
         </div>
       </section>

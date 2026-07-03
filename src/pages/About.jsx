@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Instagram, Linkedin, Code2, MessageSquare, Mic, Users } from "lucide-react";
+import { ArrowRight, Code2, MessageSquare, Mic, Users } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-
+import event1 from "@/assets/event1.JPEG";
+import event2 from "@/assets/event2.JPEG";
+import event3 from "@/assets/event3.JPEG";
+import event4 from "@/assets/event4.JPEG";
 
 const activities = [
   { icon: Code2, title: "Workshops", copy: "Hands-on sessions on the tools students actually want to learn." },
@@ -20,7 +23,7 @@ export default function About() {
         <div className="relative max-w-7xl mx-auto px-5 md:px-8 py-24 md:py-32">
           <Reveal>
             <div className="text-xs uppercase tracking-widest text-teal mb-4">// About</div>
-            <h1 className="text-5xl md:text-7xl font-bold leading-[1]">The story of <span className="text-gradient-brand">Genix</span>.</h1>
+            <h1 className="text-5xl md:text-7xl font-bold leading-none">The story of <span className="text-gradient-brand">Genix</span>.</h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
               A student-run tech society at GTBIT built around one belief: the best way to learn tech is together, out loud, and by building.
             </p>
@@ -75,45 +78,44 @@ export default function About() {
       </section>
 
       {/* CONNECT */}
-        <section className="max-w-7xl mx-auto px-5 md:px-8 py-20">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <Reveal>
-          <div className="text-xs uppercase tracking-widest text-teal mb-3">// Connect</div>
-          <h2 className="text-4xl md:text-5xl font-bold">Come find us.</h2>
-          <p className="mt-5 text-lg text-muted-foreground max-w-lg">
-            We're most active on Instagram — event drops, behind-the-scenes, and the day-to-day of Genix live there.
-            Come say hi on campus or slide into our DMs.
-          </p>
-          <div className="mt-7 flex flex-wrap gap-3">
-            <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-teal text-primary-foreground font-semibold hover:glow-teal transition">
-              <Instagram size={18} /> @genix.gtbit
-            </a>
-            <a href="#" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border hover:border-teal hover:text-teal font-semibold transition">
-              <Linkedin size={18} /> LinkedIn
-            </a>
-          </div>
-            </Reveal>
-            <Reveal delay={0.1}>
-          <div className="grid grid-cols-3 gap-2">
-            <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer" className="group relative block aspect-square rounded-xl overflow-hidden border border-border">
-              <img src="src/assets/event1.JPEG" alt="" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
-            </a>
-            <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer" className="group relative block aspect-square rounded-xl overflow-hidden border border-border">
-              <img src="src/assets/event2.JPEG" alt="" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
-            </a>
-            <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer" className="group relative block aspect-square rounded-xl overflow-hidden border border-border">
-              <img src="src/assets/event3.JPEG" alt="" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
-            </a>
-            <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer" className="group relative block aspect-square rounded-xl overflow-hidden border border-border">
-              <img src="src/assets/event4.JPEG" alt="" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
-            </a>
-            
-          </div>
-            </Reveal>
-          </div>
-        </section>
+      <section className="max-w-7xl mx-auto px-5 md:px-8 py-20">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+          <Reveal>
+            <div className="text-xs uppercase tracking-widest text-teal mb-3">// Connect</div>
+            <h2 className="text-4xl md:text-5xl font-bold">Come find us.</h2>
+            <p className="mt-5 text-lg text-muted-foreground max-w-lg">
+              We're most active on Instagram — event drops, behind-the-scenes, and the day-to-day of Genix live there.
+              Come say hi on campus or slide into our DMs.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-teal text-primary-foreground font-semibold hover:glow-teal transition">
+                📸 @genix.gtbit
+              </a>
+              <a href="#" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border hover:border-teal hover:text-teal font-semibold transition">
+                💼 LinkedIn
+              </a>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="grid grid-cols-2 gap-2">
+              <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer" className="group relative block aspect-square rounded-xl overflow-hidden border border-border">
+                <img src={event1} alt="Genix Event 1" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+              </a>
+              <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer" className="group relative block aspect-square rounded-xl overflow-hidden border border-border">
+                <img src={event2} alt="Genix Event 2" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+              </a>
+              <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer" className="group relative block aspect-square rounded-xl overflow-hidden border border-border">
+                <img src={event3} alt="Genix Event 3" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+              </a>
+              <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer" className="group relative block aspect-square rounded-xl overflow-hidden border border-border">
+                <img src={event4} alt="Genix Event 4" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
-        {/* CTA */}
+      {/* CTA */}
       <section className="max-w-7xl mx-auto px-5 md:px-8 py-16">
         <div className="relative overflow-hidden rounded-3xl border border-border p-12 md:p-20 text-center">
           <div className="absolute inset-0 gradient-brand opacity-90" />

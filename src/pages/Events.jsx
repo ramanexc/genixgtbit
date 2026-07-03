@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, MapPin, Trophy } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import event1 from "@/assets/event1.jpeg";
+import event2 from "@/assets/event2.jpeg";
+import event3 from "@/assets/event3.jpeg";
 
 
 export default function Events() {
@@ -66,18 +69,18 @@ export default function Events() {
         <div className="mt-12 grid grid-cols-6 gap-3 md:gap-4">
           <Reveal className="col-span-6 md:col-span-4">
             <figure className="rounded-2xl overflow-hidden border border-border">
-              <img src="/src/assets/event1.jpeg" alt="Genix Tech Debate participants" className="w-full aspect-[16/9] object-cover" />
+              <img src={event1} alt="Genix Tech Debate participants" className="w-full aspect-[16/9] object-cover" />
               <figcaption className="p-4 text-sm text-muted-foreground bg-card">Genix core team and participants after the final round.</figcaption>
             </figure>
           </Reveal>
           <Reveal className="col-span-6 md:col-span-2" delay={0.08}>
             <figure className="rounded-2xl overflow-hidden border border-border h-full">
-              <img src="/src/assets/event2.jpeg" alt="Faculty at Tech Debate" className="w-full h-full aspect-[3/4] object-cover" />
+              <img src={event2} alt="Faculty at Tech Debate" className="w-full h-full aspect-[3/4] object-cover" />
             </figure>
           </Reveal>
           <Reveal className="col-span-6 md:col-span-6" delay={0.12}>
             <figure className="rounded-2xl overflow-hidden border border-border">
-              <img src="/src/assets/event3.jpeg" alt="Tech Debate group photo" className="w-full aspect-[21/9] object-cover" />
+              <img src={event3} alt="Tech Debate group photo" className="w-full aspect-[21/9] object-cover" />
               <figcaption className="p-4 text-sm text-muted-foreground bg-card">A full house — students, faculty, and organizers together.</figcaption>
             </figure>
           </Reveal>
