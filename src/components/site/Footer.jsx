@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Mail } from "lucide-react";
+import logoImg from "@/assets/logo.webp";
 
 
 export function Footer() {
@@ -8,7 +9,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-14 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2.5">
-            <img src="/src/assets/logo.jpeg" alt="Genix" className="h-10 w-10 rounded-lg ring-1 ring-border" />
+            <img src={logoImg} alt="Genix" className="h-10 w-10 rounded-lg ring-1 ring-border" />
             <span className="font-display font-bold text-xl">GENIX</span>
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-sm">

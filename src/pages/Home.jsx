@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Users, Trophy, Rocket, Share2, Calendar, Instagram } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import genixImg from "@/assets/genix.jpeg";
-import event1 from "@/assets/event1.jpeg";
-import event2 from "@/assets/event2.jpeg";
-import event3 from "@/assets/event3.jpeg";
-import event4 from "@/assets/event4.jpeg";
-import gunitImg from "@/assets/gunit.jpeg";
-import gurnoorImg from "@/assets/gurnoor.jpeg";
-import jasnoorImg from "@/assets/jasnoor.jpeg";
-import agamjotImg from "@/assets/agamjot.jpeg";
+import genixImg from "@/assets/genix.webp";
+import event1 from "@/assets/event1.webp";
+import event2 from "@/assets/event2.webp";
+import event3 from "@/assets/event3.webp";
+import event4 from "@/assets/event4.webp";
+import gunitImg from "@/assets/gunit.webp";
+import gurnoorImg from "@/assets/gurnoor.webp";
+import jasnoorImg from "@/assets/jasnoor.webp";
+import agamjotImg from "@/assets/agamjot.webp";
 
 
 const benefits = [

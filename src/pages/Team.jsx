@@ -2,13 +2,16 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-
+import gunitImg from "@/assets/gunit.webp";
+import gurnoorImg from "@/assets/gurnoor.webp";
+import jasnoorImg from "@/assets/jasnoor.webp";
+import agamjotImg from "@/assets/agamjot.webp";
 
 const team = [
-  { name: "Gunit Singh", role: "President", img: "/src/assets/gunit.jpeg", quote: "Ideas beat titles. Ship the thing." },
-  { name: "Gurnoor Singh", role: "Vice President", img: "/src/assets/gurnoor.jpeg", quote: "Build hard, stay curious." },
-  { name: "Jasnoor Kaur", role: "Head of Operations", img: "/src/assets/jasnoor.jpeg", quote: "Great events are 90% details." },
-  { name: "Agamjot Singh", role: "Executive Director", img: "/src/assets/agamjot.jpeg", quote: "The best community learns loud." },
+  { name: "Gunit Singh", role: "President", img: gunitImg, quote: "Ideas beat titles. Ship the thing." },
+  { name: "Gurnoor Singh", role: "Vice President", img: gurnoorImg, quote: "Build hard, stay curious." },
+  { name: "Jasnoor Kaur", role: "Head of Operations", img: jasnoorImg, quote: "Great events are 90% details." },
+  { name: "Agamjot Singh", role: "Executive Director", img: agamjotImg, quote: "The best community learns loud." },
 ];
 
 export default function Team() {

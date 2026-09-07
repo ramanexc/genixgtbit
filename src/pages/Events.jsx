@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, MapPin, Trophy } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
-import event1 from "@/assets/event1.jpeg";
-import event2 from "@/assets/event2.jpeg";
-import event3 from "@/assets/event3.jpeg";
+import event1 from "@/assets/event1.webp";
+import event2 from "@/assets/event2.webp";
+import event3 from "@/assets/event3.webp";
 
 
 export default function Events() {
@@ -31,8 +31,20 @@ export default function Events() {
         </Reveal>
         <div className="grid md:grid-cols-2 gap-5">
           {[
-            { tag: "Workshop", title: "Intro to Full-Stack: from zero to deployed", when: "Coming soon", where: "GTBIT Campus" },
-            { tag: "Competition", title: "Genix Hack Night — 12-hour build sprint", when: "Coming soon", where: "GTBIT Campus" },
+            {
+              tag: "Workshop",
+              title: "Intro to Full-Stack: from zero to deployed",
+              when: "Coming soon",
+              where: "GTBIT Campus",
+              desc: "No experience needed. We'll take you from a blank folder to a live, deployed web app — covering HTML, CSS, JavaScript, a backend API, and deployment in one session.",
+            },
+            {
+              tag: "Competition",
+              title: "Genix Hack Night — 12-hour build sprint",
+              when: "Coming soon",
+              where: "GTBIT Campus",
+              desc: "Solo or in teams of up to 3. Pick a problem, ship a working product in 12 hours, demo it to a panel. Prizes for the top 3 builds — bring your laptop and your A-game.",
+            },
           ].map((e, i) => (
             <Reveal key={e.title} delay={i * 0.08}>
               <div className="group rounded-2xl border border-border p-7 hover:border-teal/60 hover:bg-card/50 transition h-full">
@@ -42,7 +54,7 @@ export default function Events() {
                   <span className="inline-flex items-center gap-1.5"><MapPin size={13} />{e.where}</span>
                 </div>
                 <h3 className="mt-5 text-2xl font-semibold group-hover:text-teal transition">{e.title}</h3>
-                <p className="mt-3 text-sm text-muted-foreground">[Short description of the event and what attendees will get out of it.]</p>
+                <p className="mt-3 text-sm text-muted-foreground">{e.desc}</p>
                 <button className="mt-6 inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-teal text-primary-foreground text-sm font-semibold hover:glow-teal transition">
                   RSVP <ArrowRight size={14} />
                 </button>

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { ScrollToTop } from "@/components/site/ScrollToTop";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Events from "@/pages/Events";
@@ -10,6 +11,7 @@ import NotFound from "@/pages/NotFound";
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header />
       <main className="pt-16">
         <Routes>

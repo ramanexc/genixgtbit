@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoImg from "@/assets/logo.webp";
 
 
 const links = [
@@ -29,7 +30,7 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5 group">
-          <img src="/src/assets/logo.jpeg" alt="Genix" className="h-9 w-9 rounded-lg ring-1 ring-border group-hover:ring-teal transition" />
+          <img src={logoImg} alt="Genix" className="h-9 w-9 rounded-lg ring-1 ring-border group-hover:ring-teal transition" />
           <span className="font-display font-bold text-lg tracking-tight">GENIX</span>
         </Link>
 
