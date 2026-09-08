@@ -1,8 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import logoImg from "@/assets/logo.webp";
-
 
 const links = [
   { to: "/", label: "Home" },
@@ -34,6 +34,7 @@ export function Header() {
           <span className="font-display font-bold text-lg tracking-tight">GENIX</span>
         </Link>
 
+        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <NavLink
@@ -41,7 +42,11 @@ export function Header() {
               to={l.to}
               end={l.to === "/"}
               className={({ isActive }) =>
-                `text-sm transition-colors relative ${isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`
+                `text-sm transition-colors relative pb-0.5 ${
+                  isActive
+                    ? "text-foreground after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-teal after:rounded-full"
+                    : "text-muted-foreground hover:text-foreground"
+                }`
               }
             >
               {l.label}
@@ -56,24 +61,42 @@ export function Header() {
         </div>
 
         <button className="md:hidden p-2 -mr-2" onClick={() => setOpen((o) => !o)} aria-label="Menu">
-          {open ? <X size={22} /> : <Menu size={22} />}
+          <AnimatePresence mode="wait" initial={false}>
+            {open
+              ? <motion.span key="x" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.15 }}><X size={22} /></motion.span>
+              : <motion.span key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.15 }}><Menu size={22} /></motion.span>
+            }
+          </AnimatePresence>
         </button>
       </div>
 
-      {open && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-xl">
-          <div className="px-5 py-4 flex flex-col gap-3">
-            {links.map((l) => (
-              <Link key={l.to} to={l.to} className="py-2 text-base" onClick={() => setOpen(false)}>
-                {l.label}
+      {/* Mobile drawer */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="md:hidden overflow-hidden border-t border-border bg-background/95 backdrop-blur-xl"
+          >
+            <div className="px-5 py-4 flex flex-col gap-3">
+              {links.map((l) => (
+                <Link key={l.to} to={l.to} className="py-2 text-base" onClick={() => setOpen(false)}>
+                  {l.label}
+                </Link>
+              ))}
+              <Link
+                to="/about"
+                className="mt-2 inline-flex justify-center items-center px-4 py-2.5 rounded-full bg-teal text-primary-foreground font-semibold"
+                onClick={() => setOpen(false)}
+              >
+                Join Genix
               </Link>
-            ))}
-            <Link to="/about" className="mt-2 inline-flex justify-center items-center px-4 py-2.5 rounded-full bg-teal text-primary-foreground font-semibold" onClick={() => setOpen(false)}>
-              Join Genix
-            </Link>
-          </div>
-        </div>
-      )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
