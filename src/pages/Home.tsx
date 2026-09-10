@@ -64,9 +64,8 @@ export default function Home() {
                 <Link to="/events" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-teal hover:text-teal font-semibold transition">
                   Explore Events
                 </Link>
-                <a href="https://chat.whatsapp.com/IC4HlBTSZn13mcEIROUKZn" target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-teal text-primary-foreground font-semibold hover:glow-teal transition-all hover:scale-[1.02]">
+                <a href="https://chat.whatsapp.com/IC4HlBTSZn13mcEIROUKZn" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-teal hover:text-teal font-semibold transition">
                   Genix WhatsApp
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
             </Reveal>
@@ -277,9 +276,9 @@ export default function Home() {
             <p className="mt-5 text-lg text-muted-foreground max-w-xl mx-auto">
               First-years, second-years, seniors — if you build, argue, or just love tech, we want you in.
             </p>
-            <Link to="/about" className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-teal text-primary-foreground font-bold text-lg hover:glow-teal transition hover:scale-[1.03]">
+            <a href="https://forms.gle/jzHw98Mi3QENpWfEA" target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-teal text-primary-foreground font-bold text-lg hover:glow-teal transition hover:scale-[1.03]">
               Join Now <ArrowRight />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

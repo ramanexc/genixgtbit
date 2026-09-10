@@ -37,7 +37,7 @@ export default function Events() {
         <div className="grid md:grid-cols-2 gap-5">
           {[
             { tag: "Online-Event", title: "Sticker making competition for GENIX society", when: "Coming soon", where: "GTBIT Campus" ,"description": "Design. Create. Inspire. Join the GENIX Sticker Making Competition and turn your creativity into amazing sticker designs. Showcase your artistic skills, compete with fellow innovators, and make your mark! 🎨🚀" },
-            {  tag: "PitchX-GENIX", title: "PitchX", where: "GTBIT Campus" , "description": "Join us for an exciting pitch competition where startups showcase their ideas to a panel of industry experts." },
+            { tag: "PitchX-GENIX", title: "PitchX", when: "Coming soon", where: "GTBIT Campus", description: "Join us for an exciting pitch competition where startups showcase their ideas to a panel of industry experts." },
           ].map((e, i) => (
             <Reveal key={e.title} delay={i * 0.08}>
               <div className="group rounded-2xl border border-border p-7 hover:border-teal/60 hover:bg-card/50 transition h-full">
