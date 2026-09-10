@@ -57,20 +57,24 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.15}>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link to="/about" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-teal text-primary-foreground font-semibold hover:glow-teal transition-all hover:scale-[1.02]">
+                <a href="https://forms.gle/jzHw98Mi3QENpWfEA" target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-teal text-primary-foreground font-semibold hover:glow-teal transition-all hover:scale-[1.02]">
                   Join Genix
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
                 <Link to="/events" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-teal hover:text-teal font-semibold transition">
                   Explore Events
                 </Link>
+                <a href="https://chat.whatsapp.com/IC4HlBTSZn13mcEIROUKZn" target="_blank" rel="noreferrer" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-teal text-primary-foreground font-semibold hover:glow-teal transition-all hover:scale-[1.02]">
+                  Genix WhatsApp
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </a>
               </div>
             </Reveal>
             <Reveal delay={0.2}>
               <div className="mt-12 flex items-center gap-8 text-sm text-muted-foreground">
-                <div><div className="text-2xl font-display font-bold text-foreground">100+</div>Active members</div>
+                <div><div className="text-2xl font-display font-bold text-foreground">20+</div>Active members</div>
                 <div className="h-8 w-px bg-border" />
-                <div><div className="text-2xl font-display font-bold text-foreground">15+</div>Events hosted</div>
+                <div><div className="text-2xl font-display font-bold text-foreground">2+</div>Events hosted</div>
                 <div className="h-8 w-px bg-border" />
                 <div><div className="text-2xl font-display font-bold text-foreground">4</div>Core verticals</div>
               </div>
@@ -178,10 +182,12 @@ export default function Home() {
         </div>
         <div className="grid md:grid-cols-2 gap-5">
           {[
-            { tag: "Workshop", title: "Intro to Full-Stack: from zero to deployed", when: "Coming soon" },
-            { tag: "Competition", title: "Genix Hack Night — 12-hour build sprint", when: "Coming soon" },
+            { tag: "Online-Event", title: "Sticker making competition for GENIX society", when: "Coming soon", where: "GTBIT Campus" },
+            { tag: "PitchX-GENIX", title: "PitchX", when: "Coming soon", where: "GTBIT Campus" }
+            // { tag: "Competition", title: "Genix Hack Night — 12-hour build sprint", when: "Coming soon" },
           ].map((e, i) => (
-            <Reveal key={e.title} delay={i * 0.08}>
+            <Link to="https://chat.whatsapp.com/IC4HlBTSZn13mcEIROUKZn" key={e.title} target="_blank" rel="noreferrer">
+              <Reveal key={e.title} delay={i * 0.08}>
               <div className="group rounded-2xl border border-border p-7 hover:border-teal/60 hover:bg-card/50 transition">
                 <div className="flex items-center justify-between text-xs text-muted-foreground">
                   <span className="px-2.5 py-1 rounded-full border border-border">{e.tag}</span>
@@ -191,6 +197,7 @@ export default function Home() {
                 <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-teal">RSVP <ArrowRight size={14} /></div>
               </div>
             </Reveal>
+            </Link>
           ))}
         </div>
       </section>

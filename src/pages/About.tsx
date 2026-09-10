@@ -96,7 +96,7 @@ export default function About() {
               <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-teal text-primary-foreground font-semibold hover:glow-teal transition">
                 📸 @genix.gtbit
               </a>
-              <a href="#" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border hover:border-teal hover:text-teal font-semibold transition">
+              <a href="https://www.linkedin.com/company/genix-gtbit" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border hover:border-teal hover:text-teal font-semibold transition">
                 💼 LinkedIn
               </a>
             </div>
@@ -130,7 +130,7 @@ export default function About() {
             <p className="mt-5 text-lg text-muted-foreground max-w-lg mx-auto">
               Membership is open every semester. First-years especially — this is your invite.
             </p>
-            <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-teal text-primary-foreground font-bold text-lg hover:glow-teal transition hover:scale-[1.03]">
+            <a href="https://forms.gle/jzHw98Mi3QENpWfEA" target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-teal text-primary-foreground font-bold text-lg hover:glow-teal transition hover:scale-[1.03]">
               Become a member <ArrowRight />
             </a>
             <div className="mt-4">

@@ -29,7 +29,7 @@ export default function Team() {
         <div className="relative max-w-7xl mx-auto px-5 md:px-8 py-24 md:py-32">
           <Reveal>
             <div className="text-xs uppercase tracking-widest text-teal mb-4">// The crew</div>
-            <h1 className="text-5xl md:text-7xl font-bold leading-[1]">Meet the people <br />behind <span className="text-gradient-brand">Genix</span>.</h1>
+            <h1 className="text-5xl md:text-7xl font-bold leading-none">Meet the people <br />behind <span className="text-gradient-brand">Genix</span>.</h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
               A small core team of GTBIT students running events, workshops, and everything in between.
             </p>
@@ -48,9 +48,9 @@ export default function Team() {
                 style={{ transformPerspective: 1000 }}
                 className="group rounded-3xl overflow-hidden border border-border bg-card"
               >
-                <div className="relative aspect-[4/5] overflow-hidden">
+                <div className="relative aspect-4/5 overflow-hidden">
                   <img src={m.img} alt={m.name} className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-background via-background/30 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="text-xs uppercase tracking-widest text-teal">{m.role}</div>
                     <div className="mt-1 text-xl font-bold">{m.name}</div>

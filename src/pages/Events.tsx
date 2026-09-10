@@ -36,20 +36,8 @@ export default function Events() {
         </Reveal>
         <div className="grid md:grid-cols-2 gap-5">
           {[
-            {
-              tag: "Workshop",
-              title: "Intro to Full-Stack: from zero to deployed",
-              when: "Coming soon",
-              where: "GTBIT Campus",
-              desc: "No experience needed. We'll take you from a blank folder to a live, deployed web app — covering HTML, CSS, JavaScript, a backend API, and deployment in one session.",
-            },
-            {
-              tag: "Competition",
-              title: "Genix Hack Night — 12-hour build sprint",
-              when: "Coming soon",
-              where: "GTBIT Campus",
-              desc: "Solo or in teams of up to 3. Pick a problem, ship a working product in 12 hours, demo it to a panel. Prizes for the top 3 builds — bring your laptop and your A-game.",
-            },
+            { tag: "Online-Event", title: "Sticker making competition for GENIX society", when: "Coming soon", where: "GTBIT Campus" ,"description": "Design. Create. Inspire. Join the GENIX Sticker Making Competition and turn your creativity into amazing sticker designs. Showcase your artistic skills, compete with fellow innovators, and make your mark! 🎨🚀" },
+            {  tag: "PitchX-GENIX", title: "PitchX", where: "GTBIT Campus" , "description": "Join us for an exciting pitch competition where startups showcase their ideas to a panel of industry experts." },
           ].map((e, i) => (
             <Reveal key={e.title} delay={i * 0.08}>
               <div className="group rounded-2xl border border-border p-7 hover:border-teal/60 hover:bg-card/50 transition h-full">
@@ -59,10 +47,10 @@ export default function Events() {
                   <span className="inline-flex items-center gap-1.5"><MapPin size={13} />{e.where}</span>
                 </div>
                 <h3 className="mt-5 text-2xl font-semibold group-hover:text-teal transition">{e.title}</h3>
-                <p className="mt-3 text-sm text-muted-foreground">{e.desc}</p>
-                <button className="mt-6 inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-teal text-primary-foreground text-sm font-semibold hover:glow-teal transition">
+                <p className="mt-3 text-sm text-muted-foreground">{e.description}</p>
+                <a href="https://chat.whatsapp.com/IC4HlBTSZn13mcEIROUKZn" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-teal text-primary-foreground text-sm font-semibold hover:glow-teal transition">
                   RSVP <ArrowRight size={14} />
-                </button>
+                </a>
               </div>
             </Reveal>
           ))}
@@ -97,7 +85,7 @@ export default function Events() {
           </Reveal>
           <Reveal className="col-span-6 md:col-span-6" delay={0.12}>
             <figure className="rounded-2xl overflow-hidden border border-border">
-              <img src={event3} alt="Tech Debate group photo" className="w-full aspect-[21/9] object-cover" />
+              <img src={event3} alt="Tech Debate group photo" className="w-full aspect-[4/3] object-cover" />
               <figcaption className="p-4 text-sm text-muted-foreground bg-card">A full house — students, faculty, and organizers together.</figcaption>
             </figure>
           </Reveal>
@@ -107,8 +95,8 @@ export default function Events() {
           <div className="mt-10 grid sm:grid-cols-3 gap-4">
             {[
               { k: "80+", v: "Attendees" },
-              { k: "2 hrs", v: "Of debate" },
-              { k: "5 topics", v: "Argued live" },
+              { k: "4 hrs", v: "Of debate" },
+              { k: "10+ topics", v: "Argued live" },
             ].map((s) => (
               <div key={s.v} className="rounded-2xl border border-border p-6 bg-card/40">
                 <div className="text-3xl font-display font-bold text-teal">{s.k}</div>

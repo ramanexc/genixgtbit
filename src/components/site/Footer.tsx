@@ -20,10 +20,10 @@ export function Footer() {
             <a href="https://www.instagram.com/genix.gtbit" target="_blank" rel="noreferrer" className="p-2 rounded-full border border-border hover:border-teal hover:text-teal transition">
               <Instagram size={18} />
             </a>
-            <a href="#" className="p-2 rounded-full border border-border hover:border-teal hover:text-teal transition">
+            <a href="https://www.linkedin.com/company/genix-gtbit" target="_blank" rel="noreferrer" className="p-2 rounded-full border border-border hover:border-teal hover:text-teal transition">
               <Linkedin size={18} />
             </a>
-            <a href="mailto:genix@gtbit.ac.in" className="p-2 rounded-full border border-border hover:border-teal hover:text-teal transition">
+            <a href="mailto:genix.gtbit@gmail.com" target="_blank" rel="noreferrer" className="p-2 rounded-full border border-border hover:border-teal hover:text-teal transition">
               <Mail size={18} />
             </a>
           </div>
